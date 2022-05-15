@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Register Form</title>
+	<link rel="stylesheet" type="text/css" href="CSS/registerstyle.css">
+
+	<script>
+		function validateForm()
+		{
+			if (document.myForm.fname.value==null || document.myForm.fname.value=="")
+			{
+				alert("UserName must not be empty");
+				document.myForm.fname.focus() ;
+				return false;
+			}
+
+			if (document.myForm.lname.value==null || document.myForm.lname.value=="")
+			{
+				alert("UserName must not be empty");
+				document.myForm.lname.focus() ;
+				return false;
+			}
+
+			var x = document.myForm.email.value;
+			var atpos = x.indexOf("@");
+			var dotpos = x.lastIndexOf(".");
+
+			if(x==null || x=="")
+			{
+				alert("Email must not be empty");
+				document.myForm.email.focus() ;
+				return false;
+			}
+
+			if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length)
+			{
+				alert("Not a valid e-mail address");
+				document.myForm.email.focus() ;
+				return false;
+			}
+		}
+	</script>
+</head>
+
+<body bgcolor="#E0E0E0">
+<form class="register" form name="myForm" method="post">
+	<h1>Register Here</h1>
+	<input type="text" name="fname" placeholder="First Name" autocomplete="on" required>
+	<input type="text" name="lname" placeholder="Last Name" autocomplete="on">
+	<input type="Address" name="Address" placeholder="Address" autocomplete="on" required>
+	<input type="E-mail" name="email" placeholder="E-mail" autocomplete="on" required>
+	<input type="phone" name="phone" placeholder="Mobile No." maxlength="13" pattern="[0-9]{4}-[0-9]{3}-[0-9]{3}" autocomplete="on" min="10" max="10">
+	<input type="text" name="Username" placeholder="Username" min="8" required="">
+	<input type="Password" name="user_pass" placeholder="Password" min="8" required="">
+	<input type="submit" name="submit" value="submit">
+	<a href="login.html">Already register</a>
+</form>
+</body>
+</html>

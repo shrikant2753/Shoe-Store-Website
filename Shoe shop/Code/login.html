@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>login page</title>
+	<link rel="stylesheet" type="text/css" href="CSS/loginstyle.css">
+
+	<script type="text/javascript">
+	function validateForm()
+	{
+		if (document.myForm.uname.value==null || document.myForm.uname.value=="")
+		{
+			alert("UserName must not be empty");
+			document.myForm.uname.focus() ;
+			return false;
+		}
+	}
+	</script>
+
+</head>
+<body>
+	<form class="box" form name="myForm" onsubmit="return validateForm()" action="" method="post">
+		<h1>Login</h1>
+		<input type="text" name="uname" placeholder="Username" required>
+		<input type="password" name="password" placeholder="Password" required>
+		<input type="submit" value="Submit">
+		<a href="register_form.html">Not register yet? click here</a>
+		<a href="index.html">Home page</a>
+	</form>
+</body>
+</html>

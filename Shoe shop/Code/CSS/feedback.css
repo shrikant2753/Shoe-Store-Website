@@ -1,0 +1,101 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	background: linear-gradient(90deg, #0162c8, #55e7fc);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;  
+}
+
+.container{
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+	min-height: 600px;
+	width: 600px;
+	margin: 10px;
+	background: linear-gradient(90deg, #777bea, #ee90f7);
+	box-shadow: 0 0 100px 50px #5bea;
+	border:2px solid #bea;
+	border-radius: 10px;
+}
+
+h2{
+	font-size: 40px;
+	font-family: 'Oswald', sans-serif; 	
+	user-select: none;
+	text-transform: uppercase;
+}
+
+.form{
+	margin: 30px;
+	box-sizing: border-box;
+}
+
+.user input{
+	width: 400px;
+	height: 30px;
+	margin-top: 5%;
+	border:none;
+	background-color: transparent;
+	border-bottom: 3px solid #fff;
+	font-size:20px;
+	outline: none;
+}
+
+.username input{
+	width: 400px;
+	height: 30px;
+	margin-top: 5%;
+	border:none;
+	background-color: transparent;
+	border-bottom: 3px solid #fff;
+	font-size:20px;
+	outline: none;
+}
+
+.user input::placehoder{
+	color: #fff;
+}
+
+textarea{
+	width: 400px;
+	height: 200px;
+	background: linear-gradient(180deg, #5bea, #ffc0 );
+	box-shadow: 0 0 20px 4px #303030;
+	resize: none;
+	outline: none;
+	margin-top: 3%;
+	padding-top: 10px;
+	text-align: left;
+	font-size: 18px 
+}
+
+textarea:: placeholder{
+	color: #fff;
+}
+
+.submit{
+	margin-top: 3%;
+	position: relative;
+}
+
+.submit input{
+	font-size: 20px;
+	width: 400px;
+	height: 40px;
+	border-radius:30px;
+	background:linear-gradient(90deg, #5bea, #ffc0); 
+	border: 2px solid #fff;
+	color: #f2f2f2;
+	font-family: "trade winds";
+	outline: none;
+}
+
+.submit input[type = "submit"]:active{
+	border-color: #755bea;
+}
